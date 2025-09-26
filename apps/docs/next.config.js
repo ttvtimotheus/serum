@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import { withContentlayer } from 'next-contentlayer'
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    mdxRs: true,
+  },
+}
+
+export default withContentlayer(nextConfig)

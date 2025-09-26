@@ -1,0 +1,73 @@
+---
+title: "Button"
+description: "A customizable button component with multiple variants and sizes"
+order: 1
+---
+
+# Button
+
+A versatile button component that supports multiple variants, sizes, and states.
+
+## Examples
+
+### Variants
+
+<div className="flex gap-4 my-6">
+  <Button>Primary</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="ghost">Ghost</Button>
+</div>
+
+### Sizes
+
+<div className="flex items-center gap-4 my-6">
+  <Button size="sm">Small</Button>
+  <Button size="md">Medium</Button>
+  <Button size="lg">Large</Button>
+</div>
+
+### Loading State
+
+<div className="flex gap-4 my-6">
+  <Button isLoading>Loading</Button>
+  <Button variant="secondary" isLoading>Loading</Button>
+</div>
+
+### Disabled State
+
+<div className="flex gap-4 my-6">
+  <Button disabled>Disabled</Button>
+  <Button variant="secondary" disabled>Disabled</Button>
+</div>
+
+## Usage
+
+```tsx
+import { Button } from "@serum/ui"
+
+export default function Example() {
+  return (
+    <div>
+      <Button onClick={() => console.log('Clicked!')}>
+        Click me
+      </Button>
+    </div>
+  )
+}
+```
+
+## Props
+
+<PropsTable 
+  data={[
+    { prop: "variant", type: '"primary" | "secondary" | "ghost"', default: '"primary"', description: "The visual style variant" },
+    { prop: "size", type: '"sm" | "md" | "lg"', default: '"md"', description: "The size of the button" },
+    { prop: "isLoading", type: "boolean", default: "false", description: "Shows loading spinner when true" },
+    { prop: "disabled", type: "boolean", default: "false", description: "Disables the button" },
+    { prop: "children", type: "React.ReactNode", description: "The button content" },
+    { prop: "className", type: "string", description: "Additional CSS classes" },
+    { prop: "onClick", type: "() => void", description: "Click handler function" }
+  ]}
+/>
+
+The Button component also accepts all standard HTML button attributes.

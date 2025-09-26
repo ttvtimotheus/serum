@@ -1,0 +1,78 @@
+---
+title: "Installation"
+description: "How to install and set up Serum UI in your project"
+order: 2
+---
+
+# Installation
+
+Get started with Serum UI by installing it in your React project.
+
+## Requirements
+
+- React 18 or later
+- Tailwind CSS 3.0 or later
+
+## Install Package
+
+Install Serum UI using your preferred package manager:
+
+```bash
+pnpm add @serum/ui
+```
+
+```bash
+npm install @serum/ui
+```
+
+```bash
+yarn add @serum/ui
+```
+
+## Configure Tailwind CSS
+
+Add Serum UI to your Tailwind CSS configuration:
+
+```js title="tailwind.config.js"
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@serum/ui/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+## Import Styles
+
+Import the Serum UI styles in your main CSS file or layout component:
+
+```css title="globals.css"
+@import "@serum/ui/dist/styles.css";
+```
+
+Or in your layout component:
+
+```tsx title="layout.tsx"
+import "@serum/ui/dist/styles.css"
+```
+
+## Start Building
+
+You're all set! Start using Serum UI components in your application:
+
+```tsx
+import { Button } from "@serum/ui"
+
+export default function App() {
+  return (
+    <div>
+      <Button>Get started</Button>
+    </div>
+  )
+}
+```

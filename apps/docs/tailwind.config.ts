@@ -7,9 +7,13 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
+    "./content/**/*.{md,mdx}",
     "../../packages/ui/src/**/*.{ts,tsx}"
   ],
-  darkMode: ["class"]
+  darkMode: ["class"],
+  plugins: [
+    require("@tailwindcss/typography")
+  ]
 }
 
 export default config
